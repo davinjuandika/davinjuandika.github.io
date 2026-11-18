@@ -1,147 +1,105 @@
-export const projectCategories = ['All', 'Web & Mobile', 'Game & AR', 'UI/UX']
+export const projectCategories = ['All', 'Web & Mobile', 'Game Dev', 'AI / Research']
 
 export const projects = [
   {
-    id: 'lazulite',
+    id: 'chimatcha',
     code: 'MSN-01',
-    title: 'Lazulite',
-    subtitle: '2D Turn-Based RPG in Unity',
-    category: 'Game & AR',
-    accent: 'gold',
-    bannerTheme: 'rpg',
-    year: '2026',
-    summary:
-      'A 2D turn-based RPG featuring modular unit stats, tactical item usage mechanics, dynamic health/mana UI sliders, and state-driven combat encounters.',
-    highlights: [
-      'Engineered turn order state machine and unit stat scaling in Unity C#.',
-      'Built responsive combat HUD with animated HP/MP sliders and inventory item triggers.',
-      'Collaborated via GitHub with structured milestone releases.'
-    ],
-    tech: ['Unity', 'C#', '2D Combat System', 'GitHub'],
-    links: [
-      { label: 'GitHub Repo', url: 'https://github.com/Y-Eivan/Lazulite' }
-    ]
-  },
-  {
-    id: 'talk-and-conquer',
-    code: 'MSN-02',
-    title: 'Talk and Conquer',
-    subtitle: 'Gamified Language Learning Adventure',
-    category: 'Game & AR',
-    accent: 'cyan',
-    bannerTheme: 'adventure',
-    year: '2026',
-    summary:
-      'An interactive multimedia game combining world-map exploration, NPC dialogue practice, quest progression, and boss battles to make language learning engaging.',
-    highlights: [
-      'Designed multi-region world map navigation with progressive quest unlocks.',
-      'Implemented interactive NPC conversation challenges tied directly to boss battle mechanics.',
-      'Created cohesive game UI and learner onboarding setup flow.'
-    ],
-    tech: ['Unity', 'C#', 'Game Design', 'Interactive UI'],
-    links: [
-      { label: 'Project Overview', url: '#' }
-    ]
-  },
-  {
-    id: 'mobile-canteen',
-    code: 'MSN-03',
-    title: 'Campus Canteen Order App',
-    subtitle: 'Multi-Role Web Ordering System',
+    title: 'ChiMatcha',
+    subtitle: 'Mobile Cafe Ordering App',
     category: 'Web & Mobile',
     accent: 'cyan',
-    bannerTheme: 'canteen',
-    year: '2026',
+    bannerTheme: 'matcha',
+    year: 'Feb – Jul 2026',
     summary:
-      'A mobile-first canteen food ordering web application built with Vue.js and Laravel featuring separate panels for Customers, Vendors, and Admins.',
+      'A cozy, cafe-inspired mobile app for ordering artisanal matcha, featuring drink customization, best-seller highlights, and a store locator.',
     highlights: [
-      'Translated Figma wireframes into responsive Vue.js customer flows (Home, Map, Checkout, Activity).',
-      'Integrated QRIS and Virtual Account payment simulation screens alongside order status tracking.',
-      'Structured role-based dashboards for stall vendors and canteen administrators in Laravel.'
+      'Built multi-screen native Android navigation with custom drink personalization options.',
+      'Designed a warm cafe-themed menu interface showcasing best-seller drinks and real-time cart summaries.',
+      'Implemented a store locator view to help users find nearby ChiMatcha outlets.'
     ],
-    tech: ['Vue.js', 'Laravel', 'Tailwind CSS', 'Figma'],
+    tech: ['Java', 'Android Studio', 'XML UI'],
     links: [
-      { label: 'Source Code', url: '#' }
+      { label: 'GitHub Repo', url: 'https://github.com/davinjuandika/ChiMatcha' }
     ]
   },
   {
     id: 'spojedy',
-    code: 'MSN-04',
-    title: 'SpoJeDy',
-    subtitle: 'Web Audio & Video Streaming Platform',
+    code: 'MSN-02',
+    title: 'Spojedy',
+    subtitle: 'Music & Video Streaming Web App',
     category: 'Web & Mobile',
     accent: 'purple',
     bannerTheme: 'music',
-    year: '2026',
+    year: 'Feb – Jul 2026',
     summary:
-      'A sleek media streaming web platform built with Vue.js supporting seamless audio playback, playlist browsing, and integrated video streaming.',
+      'A modern music streaming web app built with Vue.js, featuring seamless audio playback, music video integration, and personalized song discovery.',
     highlights: [
-      'Built persistent media player controls with queue management and responsive layout.',
-      'Combined audio and video playback modes within a unified single-page interface.'
+      'Engineered persistent audio player controls with smooth track switching and queue management in Vue.js.',
+      'Integrated music video playback alongside standard audio streaming within a single interface.',
+      'Created responsive song discovery and playlist browsing views using modular components.'
     ],
-    tech: ['Vue.js', 'JavaScript', 'CSS3', 'Media API'],
+    tech: ['Vue.js', 'JavaScript', 'HTML5', 'CSS3'],
     links: [
-      { label: 'GitHub Repo', url: '#' }
+      { label: 'GitHub Repo', url: 'https://github.com/NotReichmann/MultiMedia-SpoJedy' }
     ]
   },
   {
-    id: 'chi-matcha',
-    code: 'MSN-05',
-    title: 'Chi Matcha',
-    subtitle: 'Android Cafe Ordering Application',
+    id: 'picverse',
+    code: 'MSN-03',
+    title: 'Picverse',
+    subtitle: 'Artwork Discovery & Social Hub',
     category: 'Web & Mobile',
     accent: 'cyan',
-    bannerTheme: 'matcha',
-    year: '2026',
+    bannerTheme: 'gallery',
+    year: '2024 – 2025',
     summary:
-      'Native Android application developed in Java using Android Studio for browsing cafe-style matcha beverages, customizing orders, and managing cart checkout.',
+      'An artwork discovery and social networking website that unifies multi-platform social media features into one creative hub.',
     highlights: [
-      'Implemented multi-screen Android Activities/Fragments with custom drink customization.',
-      'Designed clean card-based menu browsing and real-time order summary calculation.'
+      'Developed responsive artwork gallery feeds and category browsing with semantic HTML, CSS, and JavaScript.',
+      'Combined social networking interactions—such as creator profiles and community engagement—into one hub.',
+      'Built interactive client-side filtering and artwork preview layouts.'
     ],
-    tech: ['Java', 'Android Studio', 'XML UI', 'Mobile Dev'],
+    tech: ['HTML5', 'CSS3', 'JavaScript'],
     links: [
-      { label: 'GitHub Repo', url: '#' }
+      { label: 'GitHub Repo', url: 'https://github.com/davinjuandika/Picverse' }
     ]
   },
   {
-    id: 'gameconnect',
-    code: 'MSN-06',
-    title: 'GameConnect',
-    subtitle: 'Lightweight Game Launcher & Voice Hub UI',
-    category: 'UI/UX',
-    accent: 'purple',
-    bannerTheme: 'desktop',
-    year: '2026',
-    summary:
-      'Desktop application concept designed to unify fragmented game libraries with low-memory social voice channels in a single clean interface.',
-    highlights: [
-      'Researched RAM overhead pain points when running multiple game launchers alongside voice apps.',
-      'Designed unified library grid, quick-join voice overlay, and friend activity sidebar.'
-    ],
-    tech: ['Figma', 'UI/UX Design', 'Desktop Prototype'],
-    links: [
-      { label: 'Figma Prototype', url: '#' }
-    ]
-  },
-  {
-    id: 'stationery-redesign',
-    code: 'MSN-07',
-    title: 'Mobile Stationery Shop Redesign',
-    subtitle: 'End-to-End Annotated UI/UX Case Study',
-    category: 'UI/UX',
+    id: 'lazulite',
+    code: 'MSN-04',
+    title: 'Lazulite',
+    subtitle: '2D Turn-Based Tactical RPG',
+    category: 'Game Dev',
     accent: 'gold',
-    bannerTheme: 'shop',
-    year: '2026',
+    bannerTheme: 'rpg',
+    year: '2026 – Present',
     summary:
-      'Complete UX audit and interface redesign of a mobile stationery e-commerce app, progressing from sitemap and task flows to annotated high-fidelity Figma screens.',
+      'A tactical 2D turn-based RPG developed in Unity using C#. It blends classic turn-based strategy and item management with real-time quick-time event (QTE) dodge mechanics across challenging boss encounters.',
     highlights: [
-      'Mapped user task flows and restructured product discovery categories for faster checkout.',
-      'Delivered both low-fidelity wireframes and developer-ready annotated high-fidelity mockups.'
+      'Architected side-view turn-based battle flow managing ally parties, boss phases, and real-time QTE dodge timing.',
+      'Implemented diagonal tactical battle menus, dynamic HP/SP HUD cards, and modular combat scripts.',
+      'Built an in-battle item inventory system for strategic resource and buff management.'
     ],
-    tech: ['Figma', 'Wireframing', 'Task Flows', 'Usability'],
-    links: [
-      { label: 'Figma File', url: '#' }
-    ]
+    tech: ['Unity', 'C#', '2D Combat System', 'Game UI'],
+    links: []
+  },
+  {
+    id: 'ue5-rl-il-research',
+    code: 'MSN-05',
+    title: 'Comparison of Self-Learning Agents Using Reinforcement Learning and Imitation Learning in Unreal Engine 5',
+    subtitle: 'Machine Learning & Game AI Research Paper',
+    category: 'AI / Research',
+    accent: 'purple',
+    bannerTheme: 'research',
+    year: 'Feb – Jul 2026',
+    summary:
+      'A comparative study evaluating autonomous self-learning game agents trained via Reinforcement Learning (RL) against Imitation Learning (IL) within an Unreal Engine 5 simulation environment.',
+    highlights: [
+      'Configured autonomous agent training setups in Unreal Engine 5 to compare reward-based RL against demonstration-based IL.',
+      'Evaluated agent adaptability, learning behavior, and task execution consistency across game scenarios.',
+      'Analyzed practical trade-offs between RL reward design complexity and IL demonstration data requirements.'
+    ],
+    tech: ['Unreal Engine 5', 'Reinforcement Learning', 'Imitation Learning', 'Game AI'],
+    links: []
   }
 ]

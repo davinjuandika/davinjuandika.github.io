@@ -52,7 +52,7 @@ export const profile = {
     }
   ],
   socials: {
-    email: 'davin.juandika@example.com',
+    email: 'juandikadavin@gmail.com',
     github: 'https://github.com/davinjuandika',
     linkedin: 'https://linkedin.com/in/davinjuandika',
     itch: 'https://davinjuandika.itch.io'

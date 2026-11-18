@@ -117,7 +117,9 @@ const bannerEmoji = computed(() => {
     music: '🎧',
     matcha: '🍵',
     desktop: '🎮',
-    shop: '✏️'
+    shop: '✏️',
+    gallery: '🎨',
+    research: '🧠'
   }
   return map[props.project.bannerTheme] || '🚀'
 })
