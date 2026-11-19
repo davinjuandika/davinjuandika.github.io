@@ -1,6 +1,6 @@
 import { ref } from 'vue'
 
-const sfxEnabled = ref(false)
+const sfxEnabled = ref(true)
 let audioCtx = null
 
 function getContext() {
@@ -11,9 +11,19 @@ function getContext() {
     }
   }
   if (audioCtx && audioCtx.state === 'suspended') {
-    audioCtx.resume()
+    audioCtx.resume().catch(() => {})
   }
   return audioCtx
+}
+
+if (typeof window !== 'undefined') {
+  const unlockAudio = () => {
+    getContext()
+    window.removeEventListener('pointerdown', unlockAudio)
+    window.removeEventListener('keydown', unlockAudio)
+  }
+  window.addEventListener('pointerdown', unlockAudio, { once: true })
+  window.addEventListener('keydown', unlockAudio, { once: true })
 }
 
 function playTone(freq, type = 'square', duration = 0.08, volume = 0.06, slideTo = null) {
@@ -49,6 +59,7 @@ export function useSfx() {
   }
 
   const playHover = () => {
+    if (audioCtx && audioCtx.state === 'suspended') return
     playTone(520, 'square', 0.04, 0.03)
   }
 

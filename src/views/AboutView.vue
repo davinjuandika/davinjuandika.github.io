@@ -1,58 +1,64 @@
 <template>
-  <section class="max-w-4xl mx-auto px-4 py-6 pb-24">
+  <section class="w-full max-w-6xl mx-auto py-2 lg:py-4">
     <!-- Section Title -->
-    <div class="mb-6">
-      <span class="font-arcade text-xs text-pixel-gold">SECTOR 02 // PERSONNEL DOSSIER</span>
-      <h1 class="font-pixel text-lg sm:text-2xl text-white mt-1">ASTRONAUT ID CARD</h1>
+    <div class="mb-6 lg:mb-8">
+      <span class="font-arcade text-xs lg:text-sm text-pixel-gold">SECTOR 02 // PERSONNEL DOSSIER</span>
+      <h1 class="font-pixel text-lg sm:text-2xl lg:text-3xl text-white mt-1.5">ASTRONAUT ID CARD</h1>
     </div>
 
     <!-- Main ID Card -->
-    <div class="pixel-box-gold p-5 sm:p-7 mb-6">
-      <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6">
-        <!-- Pixel Portrait Badge -->
-        <div class="w-28 h-28 bg-space-950 border-3 border-pixel-gold flex flex-col items-center justify-center shrink-0 p-2">
-          <span class="text-5xl">👨‍🚀</span>
-          <span class="font-pixel text-[7px] text-pixel-cyan mt-2">LVL. 20 DEV</span>
+    <div class="pixel-box-gold p-5 sm:p-7 lg:p-8 mb-6 lg:mb-8">
+      <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 lg:gap-8">
+        <!-- Pixel Portrait Badge (Pas Foto) -->
+        <div
+          class="w-28 h-36 sm:w-32 sm:h-40 lg:w-36 lg:h-44 bg-space-950 border-2 border-pixel-gold shrink-0 overflow-hidden"
+        >
+          <img
+            :src="`${baseUrl}pas-foto.jpg`"
+            alt="Davin Juandika"
+            class="w-full h-full object-cover object-top scale-[1.03]"
+          />
         </div>
 
         <!-- Bio Info -->
         <div class="flex-1 text-center sm:text-left">
-          <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2 mb-2">
-            <span class="font-pixel text-[9px] bg-pixel-cyan text-space-950 px-2.5 py-1">
+          <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2.5 mb-2.5">
+            <span class="font-pixel text-[9px] lg:text-[10px] bg-pixel-cyan text-space-950 px-2.5 py-1">
               {{ profile.status }}
             </span>
-            <span class="font-arcade text-xs text-slate-400">
+            <span class="font-arcade text-xs lg:text-sm text-slate-400">
               📍 {{ profile.location }}
             </span>
           </div>
 
-          <h2 class="font-arcade text-2xl font-bold text-white">
+          <h2 class="font-arcade text-2xl lg:text-3xl font-bold text-white">
             {{ profile.name }}
           </h2>
-          <p class="font-arcade text-sm text-pixel-gold mb-3">
+          <p class="font-arcade text-sm lg:text-base text-pixel-gold mb-3.5">
             {{ profile.degree }} • {{ profile.university }}
           </p>
 
-          <div class="space-y-2.5 font-sans text-sm text-slate-300 leading-relaxed">
+          <div class="space-y-2.5 font-sans text-sm lg:text-base text-slate-300 leading-relaxed max-w-4xl">
             <p v-for="(paragraph, idx) in profile.bio" :key="idx">
               {{ paragraph }}
             </p>
           </div>
 
-          <div class="mt-5 flex flex-wrap justify-center sm:justify-start gap-3">
-            <button
-              type="button"
-              @click="openCvModal"
-              class="pixel-btn bg-pixel-gold text-space-950 font-arcade text-xs font-bold px-4 py-2.5 border-2 border-amber-200 inline-flex items-center gap-2"
+          <div class="mt-6 flex flex-wrap justify-center sm:justify-start gap-3.5">
+            <a
+              :href="cvUrl"
+              download="CV-Davin-Juandika.pdf"
+              @click="playClick"
+              class="pixel-btn bg-pixel-gold text-space-950 font-arcade text-xs lg:text-sm font-bold px-4 lg:px-5 py-2.5 lg:py-3 border-2 border-amber-200 inline-flex items-center gap-2"
             >
               <span>📄</span>
-              <span>PREVIEW / PRINT CV</span>
-            </button>
+              <span>DOWNLOAD CV (PDF)</span>
+            </a>
 
             <RouterLink
               to="/projects"
               @click="playWarp"
-              class="pixel-btn bg-space-800 text-white font-arcade text-xs px-4 py-2.5 border-2 border-slate-600"
+              class="pixel-btn bg-space-800 text-white font-arcade text-xs lg:text-sm px-4 lg:px-5 py-2.5 lg:py-3 border-2 border-slate-600"
             >
               VIEW PROJECTS ►
             </RouterLink>
@@ -62,19 +68,19 @@
     </div>
 
     <!-- Two Columns: Skill Stats & Academic Log -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
       <!-- Skill Bars -->
-      <div class="pixel-box p-5">
-        <h3 class="font-pixel text-xs text-pixel-cyan mb-4">SKILL MATRIX</h3>
-        <div class="space-y-5">
+      <div class="pixel-box p-5 lg:p-7">
+        <h3 class="font-pixel text-xs lg:text-sm text-pixel-cyan mb-5">SKILL MATRIX</h3>
+        <div class="space-y-5 lg:space-y-6">
           <div v-for="skill in profile.skillStats" :key="skill.label">
-            <div class="flex justify-between font-arcade text-xs mb-1.5">
+            <div class="flex justify-between font-arcade text-xs lg:text-sm mb-1.5">
               <span class="text-white font-bold">{{ skill.label }}</span>
               <span class="text-pixel-gold">{{ skill.level }}%</span>
             </div>
 
             <!-- Segmented Pixel Progress Bar -->
-            <div class="w-full h-4 bg-space-950 border-2 border-slate-700 p-0.5">
+            <div class="w-full h-4 lg:h-5 bg-space-950 border-2 border-slate-700 p-0.5">
               <div
                 class="h-full transition-all duration-500"
                 :class="skill.color"
@@ -82,11 +88,11 @@
               ></div>
             </div>
 
-            <div class="flex flex-wrap gap-1.5 mt-2">
+            <div class="flex flex-wrap gap-1.5 mt-2.5">
               <span
                 v-for="tool in skill.tools"
                 :key="tool"
-                class="font-arcade text-[11px] px-2 py-0.5 bg-space-950 text-slate-300 border border-slate-700"
+                class="font-arcade text-[11px] lg:text-xs px-2.5 py-0.5 bg-space-950 text-slate-300 border border-slate-700"
               >
                 {{ tool }}
               </span>
@@ -96,31 +102,27 @@
       </div>
 
       <!-- Flight Log / Education -->
-      <div class="pixel-box p-5 flex flex-col justify-between">
+      <div class="pixel-box p-5 lg:p-7 flex flex-col justify-between">
         <div>
-          <h3 class="font-pixel text-xs text-pixel-purple mb-4">FLIGHT & EDUCATION LOG</h3>
+          <h3 class="font-pixel text-xs lg:text-sm text-pixel-purple mb-5">FLIGHT & EDUCATION LOG</h3>
           <div class="space-y-4">
             <div
               v-for="item in profile.highlights"
               :key="item.title"
-              class="bg-space-950/70 border-l-4 border-pixel-purple p-3.5"
+              class="bg-space-950/70 border-l-4 border-pixel-purple p-3.5 lg:p-4"
             >
-              <span class="font-arcade text-[11px] text-pixel-cyan">{{ item.period }}</span>
-              <h4 class="font-arcade text-sm font-bold text-white mt-0.5">
+              <span class="font-arcade text-[11px] lg:text-xs text-pixel-cyan">{{ item.period }}</span>
+              <h4 class="font-arcade text-sm lg:text-base font-bold text-white mt-0.5">
                 {{ item.title }}
               </h4>
-              <p class="font-arcade text-xs text-pixel-gold mb-1.5">
+              <p class="font-arcade text-xs lg:text-sm text-pixel-gold mb-1.5">
                 {{ item.org }}
               </p>
-              <p class="font-sans text-xs text-slate-300 leading-relaxed">
+              <p class="font-sans text-xs lg:text-sm text-slate-300 leading-relaxed">
                 {{ item.detail }}
               </p>
             </div>
           </div>
-        </div>
-
-        <div class="mt-5 pt-4 border-t border-slate-700 font-arcade text-xs text-slate-400">
-          💡 Tip: Place your <code class="text-pixel-gold">cv-davin-juandika.pdf</code> inside <code class="text-pixel-cyan">public/</code> for direct download.
         </div>
       </div>
     </div>
@@ -197,6 +199,8 @@ import { useSfx } from '@/composables/useSfx'
 
 const { playClick, playWarp } = useSfx()
 const showCvModal = ref(false)
+const baseUrl = import.meta.env.BASE_URL
+const cvUrl = `${baseUrl}cv-davin-juandika.pdf`
 
 function openCvModal() {
   playClick()

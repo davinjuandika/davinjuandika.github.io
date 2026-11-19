@@ -10,7 +10,7 @@
       >
         <span class="w-2.5 h-2.5 bg-pixel-cyan inline-block animate-pulse"></span>
         <span class="font-pixel text-[10px] sm:text-xs text-pixel-gold tracking-wider group-hover:text-white transition-colors">
-          DAVIN.SPACE
+          DAVIN JUANDIKA
         </span>
       </RouterLink>
 

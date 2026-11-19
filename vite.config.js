@@ -3,7 +3,7 @@ import vue from '@vitejs/plugin-vue'
 import { fileURLToPath, URL } from 'node:url'
 
 export default defineConfig({
-  base: '/davin-juandika/', // Samakan dengan nama repo GitHub kamu
+  base: '/', // Samakan dengan nama repo GitHub kamu
   plugins: [vue()],
   resolve: {
     alias: {

@@ -9,7 +9,7 @@ export const projects = [
     category: 'Web & Mobile',
     accent: 'cyan',
     bannerTheme: 'matcha',
-    year: 'Feb – Jul 2026',
+    year: 'Feb 2026 – Jul 2026',
     summary:
       'A cozy, cafe-inspired mobile app for ordering artisanal matcha, featuring drink customization, best-seller highlights, and a store locator.',
     highlights: [
@@ -30,7 +30,7 @@ export const projects = [
     category: 'Web & Mobile',
     accent: 'purple',
     bannerTheme: 'music',
-    year: 'Feb – Jul 2026',
+    year: 'Feb 2026 – Jul 2026',
     summary:
       'A modern music streaming web app built with Vue.js, featuring seamless audio playback, music video integration, and personalized song discovery.',
     highlights: [
@@ -51,7 +51,7 @@ export const projects = [
     category: 'Web & Mobile',
     accent: 'cyan',
     bannerTheme: 'gallery',
-    year: '2024 – 2025',
+    year: 'Feb 2024 – Jul 2025',
     summary:
       'An artwork discovery and social networking website that unifies multi-platform social media features into one creative hub.',
     highlights: [
@@ -72,7 +72,7 @@ export const projects = [
     category: 'Game Dev',
     accent: 'gold',
     bannerTheme: 'rpg',
-    year: '2026 – Present',
+    year: 'Sep 2026 – Present',
     summary:
       'A tactical 2D turn-based RPG developed in Unity using C#. It blends classic turn-based strategy and item management with real-time quick-time event (QTE) dodge mechanics across challenging boss encounters.',
     highlights: [
@@ -91,7 +91,7 @@ export const projects = [
     category: 'AI / Research',
     accent: 'purple',
     bannerTheme: 'research',
-    year: 'Feb – Jul 2026',
+    year: 'Feb 2026 – Jul 2026',
     summary:
       'A comparative study evaluating autonomous self-learning game agents trained via Reinforcement Learning (RL) against Imitation Learning (IL) within an Unreal Engine 5 simulation environment.',
     highlights: [

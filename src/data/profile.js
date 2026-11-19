@@ -1,15 +1,15 @@
 export const profile = {
   name: 'Davin Juandika',
   callsign: 'PILOT // DAVIN-06',
-  role: 'Multimedia & Front-End Developer',
+  role: 'Computer Science & Multimedia Developer',
   tagline: 'Crafting interactive web experiences, 2D/3D games, and clean user interfaces.',
   university: 'BINUS University — Alam Sutera',
-  degree: 'B.Sc. in Computer Science (Multimedia Stream)',
-  location: 'Tangerang, Indonesia',
+  degree: 'Bachelor of Computer Science',
+  location: 'Gading Serpong, Indonesia',
   status: 'OPEN FOR INTERNSHIP (2027)',
   bio: [
-    'Computer Science undergraduate at BINUS University specializing in Multimedia. I enjoy bridging visual storytelling with clean engineering—building responsive web apps, interactive Unity games, and intuitive UI/UX prototypes.',
-    'Currently sharpening my full-stack web workflow with Vue.js and Laravel while developing turn-based RPG and language-learning game systems in Unity C#.'
+    'Motivated and adaptable Computer Science undergraduate at BINUS University, Alam Sutera, with a strong interest in software development, game development, and UI/UX design.',
+    'Experienced in collaborative team environments—staying calm under pressure, communicating clearly across disciplines, and building responsive web apps, mobile prototypes, and Unity 2D games.'
   ],
   astronautQuotes: [
     'Click any planet to warp to a sector!',
@@ -19,42 +19,62 @@ export const profile = {
   ],
   skillStats: [
     {
-      label: 'WEB & FRONT-END DEV',
+      label: 'WEB & PROGRAMMING',
       level: 88,
       color: 'bg-pixel-cyan',
-      tools: ['Vue.js', 'Tailwind CSS', 'Laravel', 'JavaScript (ES6+)', 'REST API']
+      tools: ['Vue.js', 'JavaScript', 'TypeScript', 'HTML/CSS', 'Java', 'C', 'Python', 'MySQL']
     },
     {
-      label: 'GAME & AR DEVELOPMENT',
+      label: 'GAME & SOFTWARE DEV',
       level: 85,
       color: 'bg-pixel-gold',
-      tools: ['Unity (C#)', 'AR Foundation', '2D Turn-Based Systems', 'UI Sliders & HUD']
+      tools: ['Unity (C#)', '2D Turn-Based Systems', 'Git & GitHub', 'VS Code', 'Linux']
     },
     {
-      label: 'UI/UX & MOBILE',
-      level: 82,
+      label: 'UI/UX & MULTIMEDIA DESIGN',
+      level: 84,
       color: 'bg-pixel-purple',
-      tools: ['Figma', 'Wireframing & Sitemaps', 'Java (Android Studio)', 'Git & GitHub']
+      tools: ['UI/UX Design', 'Canva', 'Miro', 'Adobe Photoshop', 'Adobe Premiere', 'CapCut']
     }
   ],
   highlights: [
     {
-      title: 'Computer Science (Multimedia)',
+      title: 'Bachelor of Computer Science',
       org: 'BINUS University, Alam Sutera',
       period: '2024 – Present',
-      detail: 'Coursework in Human-Computer Interaction, Augmented Reality, Software Design, Web Programming, and Algorithm Design.'
+      detail: 'Pursuing Computer Science with a focus on software engineering, multimedia systems, and collaborative team projects.'
     },
     {
-      title: 'Collaborative Software & Game Projects',
-      org: 'Academic & Indie Builds',
-      period: '2025 – 2026',
-      detail: 'Built full-stack web platforms, Android cafe ordering apps, and interactive Unity prototypes from wireframe to playable release.'
+      title: 'Volunteer — Social Innovation (SDG 10)',
+      org: 'SMA Strada Santo Thomas Aquino & Panti Asuhan Pintu Elok',
+      period: '2026',
+      detail: 'Delivered an interactive educational session on ageism, cross-generational communication (Gen X, Y, Z), and social inclusion for 40–60 participants.'
+    },
+    {
+      title: 'Volunteer — Video-Based Learning (VBL 2)',
+      org: 'Social Event Campaign',
+      period: '2026',
+      detail: 'Designed a 14-slide educational presentation deck in Canva on healthy sleep patterns and physical wellness.'
+    },
+    {
+      title: 'Senior High School — Science Major (MIPA)',
+      org: 'SMA Tarakanita Gading Serpong',
+      period: '2021 – 2024',
+      detail: 'Developed analytical thinking and foundational programming skills through coding extracurricular activities.'
+    },
+    {
+      title: 'Junior & Elementary School',
+      org: 'SMP & SD Tarakanita Gading Serpong',
+      period: '2011 – 2021',
+      detail: 'Built early technical and creative foundations through Visual Design (SMP) and Robotics (SD) extracurriculars.'
     }
   ],
   socials: {
     email: 'juandikadavin@gmail.com',
     github: 'https://github.com/davinjuandika',
-    linkedin: 'https://linkedin.com/in/davinjuandika',
-    itch: 'https://davinjuandika.itch.io'
+    linkedin: 'www.linkedin.com/in/davin-juandika',
+    itch: 'https://davinjuandika.itch.io/',
+    discord: 'likeagang',
+    instagram: 'https://instagram.com/davin_juandika'
   }
 }

@@ -5,8 +5,10 @@
     @mouseenter="playHover"
     class="group flex flex-col items-center text-center focus:outline-none"
   >
-    <!-- Planet Graphic Container -->
-    <div class="relative p-3 transition-transform duration-300 group-hover:scale-110 group-hover:-translate-y-1.5">
+    <!-- Planet Graphic Container (Fixed 1:1 Square so orbit ring is a true circle) -->
+    <div
+      class="relative w-32 h-32 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:-translate-y-1.5"
+    >
       <!-- Hover Orbit Ring -->
       <div
         class="absolute inset-0 rounded-full border-2 border-dashed opacity-0 group-hover:opacity-80 transition-opacity duration-300 animate-spin"
